@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swuniz" translatesAutoresizingMaskIntoConstraints="NO" id="3hc-gf-wZd">
+                                <rect key="frame" x="37.5" y="200" width="300" height="194"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="빌리슈" translatesAutoresizingMaskIntoConstraints="NO" id="eGF-wi-yW3">
+                                <rect key="frame" x="65.5" y="414" width="244" height="32.5"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eGF-wi-yW3" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="3xq-4e-N1F"/>
+                            <constraint firstItem="eGF-wi-yW3" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="5%" id="6bh-bD-63K"/>
+                            <constraint firstItem="3hc-gf-wZd" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="9OP-hH-ufr"/>
+                            <constraint firstItem="3hc-gf-wZd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="180" id="KpR-Tj-bYp"/>
+                            <constraint firstItem="eGF-wi-yW3" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="65%" id="Q75-A1-ylA"/>
+                            <constraint firstItem="3hc-gf-wZd" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="80%" id="gUl-up-v7T"/>
+                            <constraint firstItem="3hc-gf-wZd" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="30%" id="mt1-OX-KLD"/>
+                            <constraint firstItem="eGF-wi-yW3" firstAttribute="top" secondItem="3hc-gf-wZd" secondAttribute="bottom" constant="20" id="zsZ-tS-jKX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="swuniz" width="749" height="368"/>
+        <image name="빌리슈" width="1252" height="200"/>
+    </resources>
+</document>
