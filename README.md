@@ -18,11 +18,11 @@
 -> ***어플리케이션을 통해 예약 & 강의실 확인 할 수 있는 어플리케이션 제작***
 
 ## iOS 어플리케이션 개발
-> ###API
+> ### API
 
 Django(웹 프레임 워크)를 사용하여 웹 서버를 구축하여 API통신을 구현하였다. 사용자는 APP에서 예약을 신청하고 관리자는 WEB에서 예약을 승인 및 관리하고, 문의사항을 확인할 수 있다. 
 
-> ###로그인&회원가입
+> ### 로그인&회원가입
 |  <center>로그인</center>|  <center>회원가입</center>|
 |:--------|:--------:|
 |  <img alt="로그인" src="https://user-images.githubusercontent.com/51286963/82704502-a4209f80-9cb0-11ea-9c30-773febf82e3a.png">|  <img alt="회원가입" src="https://user-images.githubusercontent.com/51286963/82704496-a08d1880-9cb0-11ea-8f0f-d870914774dd.png"> |
