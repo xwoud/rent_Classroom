@@ -31,8 +31,11 @@ Django(웹 프레임 워크)를 사용하여 웹 서버를 구축하여 API통�
                 print("데이터 없음")
                 return
             }
+        let decoder: JSONDecoder = JSONDecoder()
+            decoder.keyDecodingStrategy = JSONDecoder.KeyDecodingStrategy.convertFromSnakeCase
 ```
-guard 구문을 사용하였다. guard 구문은 if 구문과 유사하게 Bool 타입의 값으로 동작하는 기능이다. Guard 뒤에 따라붙는 코드의 실행 결과가 true일 때 코드가 계속 실행되고, Else 구문이 항상 뒤따라와야한다. 여기서는 전송받은 데이터가 있는지 확인해 있다면 꺼내주었다. 
+guard 구문을 사용하였다. guard 구문은 if 구문과 유사하게 Bool 타입의 값으로 동작하는 기능이다. Guard 뒤에 따라붙는 코드의 실행 결과가 true일 때 코드가 계속 실행되고, Else 구문이 항상 뒤따라와야한다. 여기서는 전송받은 데이터가 있는지 확인해 있다면 꺼내주었다. 그 후, JSON 데이터를 구조체 형식으로 변경해 줄 디코더를 선언해 사용해주었다.
+<br>
 
 > ### 로그인&회원가입
 |<center>로그인</center>|<center>회원가입</center>|
@@ -140,6 +143,7 @@ UIPickerView와 UIStepper를 이용해서 강의실 예약 조건을 쉽게 표�
 데이터는 서버에서 받아오고, 왼쪽의 사진으로 현재 신청이 받아드려졌는지 아직 확인중인지 쉽게 확인할 수 있다.
 
 > ###세번째 탭 : 일대일 문의게시판
+
 |<center>문의 게시판 tab</center>|<center>문의 게시판 목록</center>|<center>문의글 작성</center>|
 |:--------|:--------:|:--------:|
 |<img alt="문의게시판" src="https://user-images.githubusercontent.com/51286963/82702088-49854480-9cac-11ea-8fa9-30546ad2b957.png"> |<img alt="문의게시판목록" src="https://user-images.githubusercontent.com/51286963/82702092-4db16200-9cac-11ea-9801-ece8c56ad730.png">|<img alt="글작성" src="https://user-images.githubusercontent.com/51286963/82702094-4e49f880-9cac-11ea-9fc5-e6226409578f.png">
@@ -163,3 +167,32 @@ Alamofire.request("서버 주소").responseData{(response)in
         let textInfo:Post = Post(id: nil, author: nums, text: inquireText, createdDate: currentDate)
 ```
 내 아이디 토큰값을 넘겨주고 textInfo로 아이디,글 내용,시간 정보들을 함께 보낸다.
+
+> ###네번째 탭 : 마이페이지
+마이페이지에서는 내 아이디와 관련된 정보만 보여주어야한다.
+
+|<center>마이페이지 tab</center>|<center>로그인정보</center>|<center>내 신청목록</center>|<center>내 문의글 목록</center>|
+|:--------|:--------:|:--------:|:--------:|
+|<img alt="마이페이지" src="https://user-images.githubusercontent.com/51286963/82702795-a9c8b600-9cad-11ea-9e68-dc2ff0930136.png">|<img  alt="마이페이지_로그인정보" src="https://user-images.githubusercontent.com/51286963/82702780-a5040200-9cad-11ea-9e4c-c76dd2b165ba.png">|<img alt="마이페이지_예약현황" src="https://user-images.githubusercontent.com/51286963/82702793-a9c8b600-9cad-11ea-8d0c-65042de69f09.png">|<img alt="마이페이지_문의사항" src="https://user-images.githubusercontent.com/51286963/82702792-a9301f80-9cad-11ea-8941-5964af7f3de3.png">
+
+- 로그인정보
+```swift
+        self.idLabel.text = userInfo.string(forKey: "userid")
+        self.nameLabel.text = userInfo.string(forKey: "username")
+        self.subLabel.text = userInfo.string(forKey: "userdept")
+        self.numLabel.text = userInfo.string(forKey: "usernum")
+```
+로그인할 때 공유객체에 저장해 둔 정보를 가져와 Label의 text 값으로 넣어주었다.
+
+- 예약 현황, 문의사항
+```swift
+       let idnumber = self.rsvList[indexPath.row].id
+       var URL = "http://kmj.codegrapher.io/reservation/reservation/"+String(idnumber!)+"/"
+```
+특정 아이디 값으로 작성된 예약 건만 리스트에서 가져와야 한다.
+
+## 추후 사항
+2019년 춘계 학술대회 [강의실을 스마트하게 빌리기 위한 어플리케이션](https://www.cseric.or.kr/literature/ser_view.php?SnxGubun=INME&mode=total&searchCate=literature&more=Y&research=Y&re_q1=&pg=20&gu=INME001G0&cmd=qryview&SnxIndxNum=209753&rownum=193&totalCnt=57501&q1_t=&listUrl=L3NlYXJjaC9yZXN1bHQucGhwP1NueEd1YnVuPUlOTUUmbW9kZT10b3RhbCZzZWFyY2hDYXRlPWxpdGVyYXR1cmUmcTE9Jm1vcmU9WSZyZXNlYXJjaD1ZJnJlX3ExPSZwZz0yMA==&q1=) 논문 작성 완료
+
+
+감사합니다.
