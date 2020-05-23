@@ -69,7 +69,7 @@ Alamofire.request("계정이 저장되어 있는 서버 주소").responseData { 
 ```
 입력한 계정값을 서버 주소로 보내 가입된 id값이 맞다면 그 정보들을 **UserDefaults를 이용해 공유 객체에 저장**한다. 이 때 저장한 것은 뒤에 마이페이지 정보를 띄울때 사용할 것이다.
 
-> ###첫번째 탭 : 강의실 조회
+> ### 첫번째 탭 : 강의실 조회
 
 |  <center>강의실 조회</center>|  <center>강의실 상세 정보</center>|
 |:--------|:--------:|
@@ -111,7 +111,7 @@ if info.type == "0"{
 ```
 역시 tableview를 사용하였고, 여기서 type은 강의실이 실습실인지 혹은 실험실인지를 나타내주는것으로 type에 따라 table에서 보여주는것도 달라지게된다.
 
-> ###두번째 탭 : 강의실 예약 및 조회
+> ### 두번째 탭 : 강의실 예약 및 조회
 
 - 강의실 예약
 
@@ -142,7 +142,7 @@ UIPickerView와 UIStepper를 이용해서 강의실 예약 조건을 쉽게 표�
 |<img alt="강의실예약확인" src="https://user-images.githubusercontent.com/51286963/82700245-c9111480-9ca8-11ea-8308-e5f04e9e890b.png"> |<img alt="강의실예약확인2" src="https://user-images.githubusercontent.com/51286963/82700249-cadad800-9ca8-11ea-96e1-17313f826ed8.png"> |
 데이터는 서버에서 받아오고, 왼쪽의 사진으로 현재 신청이 받아드려졌는지 아직 확인중인지 쉽게 확인할 수 있다.
 
-> ###세번째 탭 : 일대일 문의게시판
+> ### 세번째 탭 : 일대일 문의게시판
 
 |<center>문의 게시판 tab</center>|<center>문의 게시판 목록</center>|<center>문의글 작성</center>|
 |:--------|:--------:|:--------:|
@@ -168,7 +168,7 @@ Alamofire.request("서버 주소").responseData{(response)in
 ```
 내 아이디 토큰값을 넘겨주고 textInfo로 아이디,글 내용,시간 정보들을 함께 보낸다.
 
-> ###네번째 탭 : 마이페이지
+> ### 네번째 탭 : 마이페이지
 마이페이지에서는 내 아이디와 관련된 정보만 보여주어야한다.
 
 |<center>마이페이지 tab</center>|<center>로그인정보</center>|<center>내 신청목록</center>|<center>내 문의글 목록</center>|
@@ -187,7 +187,7 @@ Alamofire.request("서버 주소").responseData{(response)in
 - 예약 현황, 문의사항
 ```swift
        let idnumber = self.rsvList[indexPath.row].id
-       var URL = "http://kmj.codegrapher.io/reservation/reservation/"+String(idnumber!)+"/"
+       var URL = "http://서버주소/reservation/reservation/"+String(idnumber!)+"/"
 ```
 특정 아이디 값으로 작성된 예약 건만 리스트에서 가져와야 한다.
 
