@@ -23,7 +23,7 @@
 Django(웹 프레임 워크)를 사용하여 웹 서버를 구축하여 API통신을 구현하였다. 사용자는 APP에서 예약을 신청하고 관리자는 WEB에서 예약을 승인 및 관리하고, 문의사항을 확인할 수 있다. 
 
 > ### 로그인&회원가입
-|  <center>로그인</center>|  <center>회원가입</center>|
+|<center>로그인</center>|<center>회원가입</center>|
 |:--------|:--------:|
 |  <img alt="로그인" src="https://user-images.githubusercontent.com/51286963/82704502-a4209f80-9cb0-11ea-9c30-773febf82e3a.png">|  <img alt="회원가입" src="https://user-images.githubusercontent.com/51286963/82704496-a08d1880-9cb0-11ea-8f0f-d870914774dd.png"> |
 
@@ -100,7 +100,7 @@ if info.type == "0"{
 
 - 강의실 예약
 
-|  <center>강의실 예약</center>|  <center>강의실 예약 2</center>|
+|<center>강의실 예약</center>|<center>강의실 예약 2</center>|
 |:--------|:--------:|
 |<img alt="강의실예약view" src="https://user-images.githubusercontent.com/51286963/82700232-c1517000-9ca8-11ea-853d-b8cf45d412fd.png"> |<img alt="강의실예약추가" src="https://user-images.githubusercontent.com/51286963/82700243-c6162400-9ca8-11ea-98f7-d93c8311c7d6.png"> |
 
@@ -122,13 +122,13 @@ UIPickerView와 UIStepper를 이용해서 강의실 예약 조건을 쉽게 표�
 
 - 강의실 예약 조회
 
-|  <center>강의실 예약 조회</center>|  <center>강의실 예약 조회 2</center>|
+|<center>강의실 예약 조회</center>|<center>강의실 예약 조회 2</center>|
 |:--------|:--------:|
 |<img alt="강의실예약확인" src="https://user-images.githubusercontent.com/51286963/82700245-c9111480-9ca8-11ea-8308-e5f04e9e890b.png"> |<img alt="강의실예약확인2" src="https://user-images.githubusercontent.com/51286963/82700249-cadad800-9ca8-11ea-96e1-17313f826ed8.png"> |
 데이터는 서버에서 받아오고, 왼쪽의 사진으로 현재 신청이 받아드려졌는지 아직 확인중인지 쉽게 확인할 수 있다.
 
 > ###세번째 탭 : 일대일 문의게시판
-|  <center>문의 게시판 tab</center>|  <center>문의 게시판 목록</center>|<center>문의글 작성</center>|
+|<center>문의 게시판 tab</center>|<center>문의 게시판 목록</center>|<center>문의글 작성</center>|
 |:--------|:--------:|:--------:|
 |<img alt="문의게시판" src="https://user-images.githubusercontent.com/51286963/82702088-49854480-9cac-11ea-8fa9-30546ad2b957.png"> |<img alt="문의게시판목록" src="https://user-images.githubusercontent.com/51286963/82702092-4db16200-9cac-11ea-9801-ece8c56ad730.png">|<img alt="글작성" src="https://user-images.githubusercontent.com/51286963/82702094-4e49f880-9cac-11ea-9fc5-e6226409578f.png">
 
